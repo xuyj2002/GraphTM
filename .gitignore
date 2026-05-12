@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# 忽略所有源代码
+*.py
+__pycache__/
+
+# 绝对禁止上传打包后的二进制大文件
+graphtm.bin
+predict.bin
+
+# 忽略输出文件夹
+output/
