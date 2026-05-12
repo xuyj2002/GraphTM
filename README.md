@@ -15,7 +15,7 @@ GraphTM is a physics-aware graph attention network enhanced by multidimensional 
 ## Datasets Overview
 
 We provide the complete datasets used for training and evaluating GraphTM:
-* **DeepSTABp**: Primary benchmark for Tm prediction (30-97°C).
+* **DeepSTABp**: Primary benchmark for Tm prediction.
 * **DeepTM-OGT & DeepTM-Tm50**: Benchmarks for Optimal Growth Temperature (OGT) and high-temperature predictions.
 * **TmPred**: A low-homology dataset designed for evaluating robustness on extreme thermophilic proteins.
 * **DeepTP & iThermo**: Datasets for thermophilic protein discrimination tasks, including balanced, unbalanced, and homology-specific subsets.
@@ -23,7 +23,6 @@ We provide the complete datasets used for training and evaluating GraphTM:
 ## System Requirements
 
 * **Operating System**: Linux (Tested on Ubuntu/CentOS).
-* **Memory (RAM)**: Minimum 16 GB recommended (to handle ESMC-600M feature processing and graph construction).
 * **Dependencies**: None. The standalone binary encapsulates PyTorch, PyTorch Geometric, and all required model weights.
 
 ## Quick Start Guide
