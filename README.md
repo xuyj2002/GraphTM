@@ -1,4 +1,4 @@
-# GraphTM: Protein Thermal Stability Prediction (Binary Release)
+# GraphTM: Protein Thermal Stability Prediction
 
 GraphTM is a physics-aware graph attention network enhanced by multidimensional physicochemical edge features, designed to predict protein melting temperatures (Tm). This repository provides the pre-compiled standalone inference client for Linux systems, alongside our comprehensive benchmark datasets.
 
