@@ -30,7 +30,13 @@ We provide the complete datasets used for training and evaluating GraphTM:
 
 Since the fully compiled executable is too large for a standard Git repository, it is hosted on the Releases page. Please download `graphtm.bin` from the Releases page and place it in your project root directory before proceeding.
 
-### 1. Run Inference
+### 1. Grant Permissions
+
+Ensure the downloaded binary has execution rights:
+
+    chmod +x graphtm.bin
+
+### 2. Run Inference
 
 To avoid interference from system-wide libraries, clear the environment path before execution. The predictions will be saved automatically in a newly generated `output/` folder.
 
@@ -39,6 +45,24 @@ To avoid interference from system-wide libraries, clear the environment path bef
 
     # Execute the prediction client
     ./graphtm.bin --csv input/target_list.csv
+
+### 3. Advanced Usage
+
+GraphTM supports custom paths for input data and output directories. This is useful if your PDB or feature databases are stored in different locations.
+
+    # Example of using custom paths
+    ./graphtm.bin \
+        --csv /path/to/your/list.csv \
+        --pdb_dir /path/to/pdb_database \
+        --esmc_dir /path/to/feature_database \
+        --out_dir /path/to/custom_output
+
+#### Parameters Description:
+
+* **--csv**: Path to the target CSV file containing `uniprot_id`. (Default: `input/target_list.csv`)
+* **--pdb_dir**: Directory containing the protein 3D structure files (.pdb). (Default: `input/pdb`)
+* **--esmc_dir**: Directory containing the ESMC-600M sequence embedding files (.npy). (Default: `input/esmc_feat`)
+* **--out_dir**: Directory where the prediction results and error logs will be saved. (Default: `output`)
 
 ## Input Format
 
